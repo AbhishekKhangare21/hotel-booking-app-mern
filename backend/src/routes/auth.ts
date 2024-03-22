@@ -34,6 +34,14 @@ router.post(
         return res.status(400).json({ message: "Invalid Credentials" });
       }
 
+      // const token = jwt.sign(
+      //   { userId: user.uid },
+      //   process.env.JWT_SECRET_KEY as string,
+      //   {
+      //     expiresIn: "1d",
+      //   }
+      // );
+
       const token = jwt.sign(
         { userId: user.id },
         process.env.JWT_SECRET_KEY as string,
