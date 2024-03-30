@@ -12,6 +12,7 @@ const Booking = () => {
   const { stripePromise } = useAppContext();
   const search = useSearchContext();
   const { hotelId } = useParams();
+  console.log("booking added");
 
   const [numberOfNights, setNumberOfNights] = useState<number>(0);
 
