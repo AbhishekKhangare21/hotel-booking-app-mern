@@ -39,6 +39,9 @@ app.use(
   })
 );
 
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Api is working fine" });
+});
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
 app.use("/api/auth", authRoutes);
